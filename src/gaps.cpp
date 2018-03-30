@@ -39,8 +39,6 @@ Gaps::shellsort(std::vector<long long> vector,
                 std::vector<long long> gaps){
   int max_gap = 0;
 
-  for(auto i = 0; gaps[i] < (long long)vector.size(); i++, max_gap = i);
-
   while(max_gap){
     for(auto i = gaps[max_gap]; i < (long long)vector.size(); i++){
       auto current = vector[i];
@@ -52,6 +50,26 @@ Gaps::shellsort(std::vector<long long> vector,
       vector[id] = current;
     }
     max_gap--;
+  }
+
+  return vector; 
+}
+
+std::vector<long long> 
+Gaps::shellsort(std::vector<long long> vector){
+  int gap = vector.size() / 2;
+
+  while(gap > 0){
+    for(auto i = gap; i < (long long)vector.size(); i++){
+      auto current = vector[i];
+      int id = i;
+      while(id >= gap && vector[id - gap] > current){
+        vector[id] = vector[id - gap];
+        id -= gap;
+      }
+      vector[id] = current;
+    }
+    gap /= 2;
   }
 
   return vector; 

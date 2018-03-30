@@ -7,6 +7,7 @@ class Gaps {
   public:
     static std::vector<long long> fibonacci(long long max);
     static std::vector<long long> catalan(long long max);
+    static std::vector<long long> shellsort(std::vector<long long> vector);
     static std::vector<long long> shellsort(std::vector<long long> vector,
         std::vector<long long> gaps);
 };
