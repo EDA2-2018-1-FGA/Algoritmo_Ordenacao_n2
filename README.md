@@ -1,10 +1,10 @@
-# Algoritmo_Ordenacao_n2
+# Algoritmo Ordenacao Shellsort
 
 O objetivo deste é a execução de um algoritmo O(n²) e o mapeamento do seu tempo em tabela para que possa ser comprovada sua complexidade.
 
 Para efeito deste optamos por comparar o shellsort utilizando como gap os meios do vetor como, os números de fibonacci e os números de catalan.
 
-A tabela gerada pode ser conferida abaixo.
+A tabela gerada pode ser conferida abaixo (varia de 100 à 10000 com passo de 100).
 
 |N |middle(ns)|fibonacci(ns)|catalan(ns)|
 |--|----------|-------------|-----------|
