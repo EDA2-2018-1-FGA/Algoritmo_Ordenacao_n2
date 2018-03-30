@@ -4,7 +4,7 @@ O objetivo deste é a execução de um algoritmo O(n²) e o mapeamento do seu te
 
 Para efeito deste optamos por comparar o shellsort utilizando como gap os meios do vetor como, os números de fibonacci e os números de catalan.
 
-A tabela gerada pode ser conferida abaixo (varia de 100 à 10000 com passo de 100).
+A tabela gerada e sua [análise](#conclusão) pode ser conferida abaixo (tabela varia de 100 à 10000 com passo de 100).
 
 |N |middle(ns)|fibonacci(ns)|catalan(ns)|
 |--|----------|-------------|-----------|
@@ -109,6 +109,7 @@ A tabela gerada pode ser conferida abaixo (varia de 100 à 10000 com passo de 10
 |9900|3915916|32677|5960|
 |10000|3840804|30107|5688|
 
+## Conclusão
 Pode-se notar que para a execução, onde o gap eram os meios do vetor o tempo de ficou proximo de n², apenas a multiplicação de uma pequena constante de diferença, contudo em alguns valores específicos o tempo de execução teve uma variação um pouco maior.
 
 Efetuando a ordenação utilizando tanto fibonacci quanto catalan a diferença de performance foi extremamente significativa. No caso dos números de catalan conforme o valor de N fosse crescendo, ele chegou a executar em O(n).
